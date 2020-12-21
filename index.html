@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siala</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_flickity.css">
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        .flickity-button:hover {
+            background: transparent;
+            cursor: pointer;
+        }
+
+        /* no circle */
+        .flickity-button {
+            background: transparent;
+        }
+
+        /* big previous & next buttons */
+        .flickity-prev-next-button {
+            width: 80px;
+            height: 80px;
+        }
+
+        /* icon color */
+        .flickity-button-icon {
+            fill: white;
+        }
+
+        /* hide disabled button */
+        .flickity-button:disabled {
+            display: none;
+        }
+
+        @media only screen and (max-width: 480px) {
+
+            /* big previous & next buttons */
+            .flickity-prev-next-button {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- === HEADER === -->
+    <header class="header">
+        <div class="container">
+            <div id="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="" class="logo_normal">
+                </a>
+            </div>
+            <div id="burger-menu" class="overlay">
+                <span id="closebtn">&times;</span>
+                <div class="burger-logo">
+                </div>
+                <ul class="overlay-content">
+                    <li><a href="index.html">Forside</a></li>
+                    <li><a href="product.html?id=20">Produkter</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                    <li><a href="om.html">Om os</a></li>
+                    <li><a href="kontakt.html">Kontakt os</a></li>
+                    <li><a href="basket.html">Indkøbskurv</a></li>
+                </ul>
+            </div>
+            <span id="openbtn">&#9776;</span>
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="index.html">Forside</a></li>
+                    <li><a href="product.html?id=20">Produkter</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                    <li><a href="om.html">Om os</a></li>
+                    <li><a href="kontakt.html">Kontakt os</a></li>
+                    <li class="basket_icon"><a class="basket_link" href="basket.html"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- === SPLASH VIDEO SECTION === -->
+        <section id="header-video">
+            <div class="black-overlay"></div>
+            <video id="videoBG" poster="img/poster.jpg" autoplay muted loop>
+                <source src="video/video.mp4" type="video/mp4">
+            </video>
+            <div class="sectionwrapper">
+                <div class="video-text">
+                    <h3>Skræddersyet til dit hjem</h3>
+                    <h1>The sound of the soul</h1>
+                    <p></p>
+                    <div class="back_link">
+                        <a href="#carousel">Skræddersy din højtaler</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === INTRO SECTION === -->
+        <section id="intro">
+            <div class="sectionwrapper shadow">
+                <div class="row">
+                    <div class="column">
+                        <h3 class="subheader_intro"></h3>
+                        <h1 class="header_intro"></h1>
+                        <p class="intro_tekst"></p>
+                        <div class="back_link">
+                            <a href="product.html?id=20">Læs mere om Siala</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <img class="intro_img" src="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === SLIDER SECTION === -->
+        <section id="carousel">
+            <div class="sectionwrapper">
+                <div class="row">
+                    <div class="heading">
+                        <h3>Subheading here</h3>
+                        <h1>the sound of siala</h1>
+                    </div>
+                    <div class="main-gallery js-flickity" data-flickity-options='{ "wrapAround": true }' data-flickity-options='{ "cellAlign": "left", "contain": true }'>
+                        <div class="gallery-cell product_1">
+                            <img src="img/product_image_01.png"><a href="product.html?id=20"></a>
+                        </div>
+                        <div class="gallery-cell product_3">
+                            <img src="img/product_image_04.png">
+                        </div>
+                        <div class="gallery-cell product_2">
+                            <img src="img/product_image_02.png">
+                        </div>
+                        <div class="gallery-cell product_3">
+                            <img src="img/product_image_03.png">
+                        </div>
+                        <div class="gallery-cell product_3">
+                            <img src="img/product_image_05.png">
+                        </div>
+                        <div class="gallery-cell product_3">
+                            <img src="img/product_image_06.png">
+                        </div>
+                        <!--
+                        <div class="gallery-cell product_4"></div>
+                        <div class="gallery-cell product_5"></div>
+-->
+                    </div>
+                    <div class="gallery_title">
+                        <h3>Siala V1 - Sort læder, hvid boks</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <div class="back_link">
+                            <a href="product.html?id=20">Produktdetaljer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === BEHIND THE SCENES SECTION === -->
+        <section id="behindthescenes">
+            <div class="sectionwrapper">
+                <div class="row">
+                    <div class="column">
+                        <img class="bts_img" src="">
+                    </div>
+                    <div class="column">
+                        <h3 class="subheader_bts"></h3>
+                        <h1 class="header_bts"></h1>
+                        <p class="bts_text"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- === ICONBOX SECTION === -->
+        <section id="iconbox">
+            <div class="sectionwrapper">
+                <div class="row">
+                    <div class="column">
+                        <img src="img/icon_box_1.png" class="icon_img">
+                        <h3 class="icon_title color_text">Fantastisk lyd</h3>
+                        <p class="icon_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                    <div class="column">
+                        <img src="img/icon_box_2.png" class="icon_img">
+                        <h3 class="icon_title color_text">Dansk design</h3>
+                        <p class="icon_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                    <div class="column">
+                        <img src="img/icon_box_3.png" class="icon_img">
+                        <h3 class="icon_title color_text">Skræddersyet</h3>
+                        <p class="icon_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- === NEWSLETTER SECTION === -->
+        <section id="product_info" class="hide-mobile">
+            <div class="sectionwrapper">
+                <div class="row">
+                    <div class="column flex">
+                        <div>
+                            <h3 style="margin-left: 0">Mærk detaljerne</h3>
+                            <p>Vi har lagt meget arbejde i detaljerne på Saga højtaleren - hold musen over de hvide punkter og se nærmere. <br><br><br></p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <!-- === SPEAKER MAP SECTION === -->
+                        <section id="speaker_map_section">
+
+                            <div class="speaker_map_wrapper">
+
+                                <div class="speaker_map_front">
+
+                                    <div class="tooltip tooltip1">
+                                        <img src="img/tool.svg" alt="tool">
+                                        <span class="tooltiptext hidden">
+                                            <h3>SOLIDE MATERIALER</h3>
+                                            <p>Vi udvælger selv de bedst egnede materialer og planker til vores højtaler. Vælg mellem: Eg, valnød eller corian (på billedet)</p>
+                                        </span>
+                                    </div>
+
+                                    <div class="tooltip tooltip2">
+                                        <img src="img/tool.svg" alt="tool">
+                                        <span class="tooltiptext hidden">
+                                            <h3>ITALIENSK LÆDER</h3>
+                                            <p>Højtaleren bliver belagt med lækker italiensk læder i valgfri farve: mocca, caramel(?) eller sort (på billedet).</p>
+                                        </span>
+                                    </div>
+
+                                    <div class="tooltip tooltip3">
+                                        <img src="img/tool.svg" alt="tool">
+                                        <span class="tooltiptext hidden">
+                                            <h3>HÅNDLAVET GREB</h3>
+                                            <p>Skal din højtaler være med eller uden greb? Vi laver din højtaler lige som du vil have den. </p>
+                                        </span>
+                                    </div>
+
+                                    <div class="tooltip tooltip4">
+                                        <img src="img/tool.svg" alt="tool">
+                                        <span class="tooltiptext hidden">
+                                            <h3>UTROLIG LYD</h3>
+                                            <p>Vi har valgt vores højtalerenheder fra en anerkendt amerikansk producent. Det betyder, at vi kan få en utrolig fyldig bund i højtaleren helt uden forvrængning. </p>
+                                        </span>
+                                    </div>
+
+                                    <div class="tooltip tooltip5">
+                                        <img src="img/tool.svg" alt="tool">
+                                        <span class="tooltiptext hidden">
+                                            <h3>BØRSTET MESSING</h3>
+                                            <p>Vi har lagt utrolig mange kræfter i at opnå den perfekte “messing finish”, den rette balance imellem børstet og blankt, fræse teknikker, indgraverings dybder og panel kompositioner. </p>
+                                        </span>
+                                    </div>
+
+
+
+                                </div>
+
+
+
+                                <!--        Speaker map back-->
+
+                                <div class="speaker_map_back hidden">
+
+
+                                    <div class="tooltip tooltip6">
+                                        <img src="img/tool.svg" alt="tool">
+                                        <span class="tooltiptext hidden">
+                                            <h3>HØJTALERENS KERNE</h3>
+                                            <p>Vi bygger kernen i alle vores kabinetter af højkvalitets 7 lags birkekrydsfiner. Det erkendt som et af de absolut bedste materialer til at bygge højtalere i.</p>
+                                        </span>
+                                    </div>
+
+                                    <div class="tooltip tooltip7">
+                                        <img src="img/tool.svg" alt="tool">
+                                        <span class="tooltiptext hidden">
+                                            <h3>BASPORT</h3>
+                                            <p>Åbningen til basporten bliver håndbygget <br> efter eget valgt materiale.</p>
+                                        </span>
+                                    </div>
+
+                                    <div class="tooltip tooltip8">
+                                        <img src="img/tool.svg" alt="tool">
+                                        <span class="tooltiptext hidden">
+                                            <h3>MADE IN COPENHAGEN</h3>
+                                            <p>Vores bagside er dekoreret med et børstet messing panel med indbygget LED indikatorer, AUX plug-in samt power input.</p>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="flex">
+                            <div class="arrow_container">
+                                <div id="arrow">Undersøg højtalerens bagside</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="sectionwrapper">
+            <div class="row">
+                <div class="column hide-mobile">
+                    <h3>Følg os</h3>
+                    <ul class="quicklinks">
+                        <li><a href="https://facebook.com/sialacph/">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/sialacph/">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/company/siala-aps/?originalSubdomain=dk">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Samarbejder</h3>
+                    <ul class="quicklinks">
+                        <li><a href="article.html">Siala x Nicolaj Bo</a></li>
+                        <li><a href="article.html">Siala x Stil og Form</a></li>
+                        <li><a href="article.html">Siala x Onetreeplanted</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Kontakt os</h3>
+                    <ul>
+                        <li class="li1">+45 74 42 18 48</li>
+                        <li class="li2">Rundholtsvej 111, 2300 København S</li>
+                        <li class="li3">info@siala.dk</li>
+                    </ul>
+                </div>
+                <div class="column logo_column">
+                    <img src="img/logo_dark.png" width="200px">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="bottom_bar">
+        <div class="sectionwrapper">
+            <div class="row">
+                <div class="column">CVR: 35902619</div>
+                <div class="column align-right">2020 © Copyright</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/flickity_script.js"></script>
+
+    <!-- === SLIDESHOW SCRIPT === -->
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        //VORES TEMPLATE INDHOLD BLIVER PLACERET I CLASS INDHOLD
+        // OG VI FETCHER JSON FRA VORES URL
+
+        const slide = document.querySelector("#indhold");
+        const template = document.querySelector("template").content;
+        const url = "http://www.weblouise.dk/kea/2_semester/eksamen/siala_wordpress/wordpress/wp-json/wp/v2/produkter";
+
+        async function start() {
+            const respons = await fetch(url);
+            const json = await respons.json();
+            vis(json);
+        }
+
+        // INDHOLD KLONES OG PLACERES
+
+        function vis(slideshow) {
+            console.log(slideshow)
+            slideshow.forEach(slideshow => {
+                const klon = template.cloneNode(true);
+                klon.querySelector("img").src = slideshow.produktbillede.guid;
+                klon.querySelector("img").alt = slideshow.billedebeskrivelse;
+                slide.appendChild(klon);
+            })
+        }
+
+        //SLIDER CAROUSEL
+
+        const gap = 16;
+
+        const carousel = document.getElementById("carousel"),
+            //            indhold = document.getElementById("indhold"),
+            frem = document.getElementById("frem"),
+            tilbage = document.getElementById("tilbage");
+
+
+        //FREM KNAP.SCROLLER FORBI BREDDEN + CONSTA GAP
+
+        frem.addEventListener("click", e => {
+            carousel.scrollBy(width + gap, 0);
+            if (carousel.scrollWidth !== 0) {
+                tilbage.style.display = "flex";
+            }
+            if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+                frem.style.display = "none";
+            }
+        });
+
+        //TILBAGE KNAP
+
+        tilbage.addEventListener("click", e => {
+            carousel.scrollBy(-(width + gap), 0);
+            if (carousel.scrollLeft - width - gap <= 0) {
+                tilbage.style.display = "none";
+            }
+            if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+                frem.style.display = "flex";
+            }
+        });
+        let width = carousel.offsetWidth;
+        window.addEventListener("resize", e => (width = carousel.offsetWidth));
+
+    </script>
+
+    <!-- === WP REST API FORSIDE INTRO === -->
+    <script>
+        let urlParams = new URLSearchParams(window.location.search);
+        let id = urlParams.get("id");
+        let sider;
+        document.addEventListener("DOMContentLoaded", getTheDish);
+        async function getTheDish() {
+
+            let url = "http://www.weblouise.dk/kea/2_semester/eksamen/siala_wordpress/wordpress/wp-json/wp/v2/forside/53";
+            let jsonData = await fetch(url);
+            sider = await jsonData.json();
+            //console.log("LOADING DONE",theDish);
+            //            showDishes();
+
+            document.querySelector(".intro_img").src = sider.image.guid;
+            document.querySelector(".intro_tekst").innerHTML = sider.content.rendered;
+            document.querySelector(".header_intro").textContent = sider.heading;
+            document.querySelector(".subheader_intro").textContent = sider.subheading;
+        }
+
+    </script>
+
+    <!-- === SPEAKER MAP === -->
+    <script>
+        window.addEventListener("load", sidenVises);
+
+        function sidenVises() {
+            console.log("sidenVises");
+            document.querySelector(".arrow_container").addEventListener("click", hideSpeaker);
+
+            // Når musen er over tooltip
+            document.querySelector(".tooltip1 img").addEventListener("mouseover", showTooltiptext);
+            document.querySelector(".tooltip2 img").addEventListener("mouseover", showTooltiptext);
+            document.querySelector(".tooltip3 img").addEventListener("mouseover", showTooltiptext);
+            document.querySelector(".tooltip4 img").addEventListener("mouseover", showTooltiptext);
+            document.querySelector(".tooltip5 img").addEventListener("mouseover", showTooltiptext);
+            document.querySelector(".tooltip6 img").addEventListener("mouseover", showTooltiptext);
+            document.querySelector(".tooltip7 img").addEventListener("mouseover", showTooltiptext);
+            document.querySelector(".tooltip8 img").addEventListener("mouseover", showTooltiptext);
+
+            // Når musen er bevæger sig væk fra tooltip
+            document.querySelector(".tooltip1 img").addEventListener("mouseout", hideTooltiptext);
+            document.querySelector(".tooltip2 img").addEventListener("mouseout", hideTooltiptext);
+            document.querySelector(".tooltip3 img").addEventListener("mouseout", hideTooltiptext);
+            document.querySelector(".tooltip4 img").addEventListener("mouseout", hideTooltiptext);
+            document.querySelector(".tooltip5 img").addEventListener("mouseout", hideTooltiptext);
+            document.querySelector(".tooltip6 img").addEventListener("mouseout", hideTooltiptext);
+            document.querySelector(".tooltip7 img").addEventListener("mouseout", hideTooltiptext);
+            document.querySelector(".tooltip8 img").addEventListener("mouseout", hideTooltiptext);
+
+        }
+
+
+        //når jeg klikker på pilen skal den gå ned i funktionen hideSpeaker/
+
+        function hideSpeaker() {
+            console.log(hideSpeaker);
+            document.querySelector(".speaker_map_back").classList.toggle("hidden");
+            document.querySelector(".speaker_map_front").classList.toggle("hidden");
+            document.querySelector(".speaker_map_back").classList.add("fade");
+            document.querySelector(".speaker_map_front").classList.add("fade");
+
+            let erSkjult = document.querySelector(".speaker_map_back").classList.contains("hidden");
+
+            if (erSkjult == true) {
+                document.querySelector("#arrow").textContent = "Undersøg højtalerens bagside";
+            } else {
+                document.querySelector("#arrow").textContent = "Undersøg højtalerens forside";
+            }
+        }
+
+        //toggle: hvis den ikke er der tilføjer man hidden, hvis den ikke er der tilføjer man
+
+
+        //Her bliver "hidden" og fade lagt på tooltiåyext//
+
+        function showTooltiptext() {
+            console.log(showTooltiptext);
+
+
+            // class'en hidden bliver fjernet
+            this.parentElement.querySelector(".tooltiptext").classList.remove("hidden");
+            this.parentElement.querySelector(".tooltiptext").classList.add("fade");
+        }
+
+        // class'en hidden bliver tilføjet
+        function hideTooltiptext() {
+            console.log(hideTooltiptext);
+            this.parentElement.querySelector(".tooltiptext").classList.add("hidden");
+        }
+
+    </script>
+
+
+    <!-- === WP REST API FORSIDE BTS === -->
+    <script>
+        let urlParams2 = new URLSearchParams(window.location.search);
+        let id2 = urlParams2.get("id");
+        let page;
+        document.addEventListener("DOMContentLoaded", getTheDish2);
+        async function getTheDish2() {
+
+            let url2 = "http://www.weblouise.dk/kea/2_semester/eksamen/siala_wordpress/wordpress/wp-json/wp/v2/forside/56";
+            let jsonData = await fetch(url2);
+            page = await jsonData.json();
+            //console.log("LOADING DONE",theDish);
+            //            showDishes();
+
+            document.querySelector(".bts_img").src = page.image.guid;
+            document.querySelector(".bts_text").innerHTML = page.content.rendered;
+            document.querySelector(".header_bts").textContent = page.heading;
+            document.querySelector(".subheader_bts").textContent = page.subheading;
+        }
+
+    </script>
+
+</body>
+
+</html>

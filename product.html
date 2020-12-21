@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siala</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        /* The grid: Four equal columns that floats next to each other */
+        .pg_column {
+            float: left;
+            width: 31.2%;
+            padding: 10px;
+            margin-right: 16px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: #f6f6f6;
+        }
+
+        @media (max-width: 550px) {
+            .pg_column {
+                width: 30%;
+            }
+        }
+
+        .pg_column:last-child {
+            margin-right: 0;
+        }
+
+
+        /* Style the images inside the grid */
+        .pg_column img {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .pg_column img:hover {
+            opacity: 1;
+        }
+
+        /* Clear floats after the columns */
+        .pg_row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* The expanding image container (positioning is needed to position the close button and the text) */
+        .pg_container {
+            position: relative;
+            display: none;
+            background-color: #f6f6f6;
+        }
+
+        /* Expanding image text */
+        #imgtext {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: white;
+            font-size: 20px;
+        }
+
+        /* Closable button inside the image */
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- === HEADER === -->
+    <header class="header">
+        <div class="container">
+            <div id="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="" class="logo_normal">
+                </a>
+            </div>
+            <div id="burger-menu" class="overlay">
+                <span id="closebtn">&times;</span>
+                <div class="burger-logo">
+                </div>
+                <ul class="overlay-content">
+                    <li><a href="index.html">Forside</a></li>
+                    <li><a href="product.html?id=20">Produkter</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                    <li><a href="om.html">Om os</a></li>
+                    <li><a href="kontakt.html">Kontakt os</a></li>
+                    <li><a href="basket.html">Indkøbskurv</a></li>
+                </ul>
+            </div>
+            <span id="openbtn">&#9776;</span>
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="index.html">Forside</a></li>
+                    <li><a href="product.html?id=20">Produkter</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                    <li><a href="om.html">Om os</a></li>
+                    <li><a href="kontakt.html">Kontakt os</a></li>
+                    <li class="basket_icon"><a class="basket_link" href="basket.html"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- === SUBHEADER SECTION === -->
+        <div class="subheader"></div>
+
+        <section id="product">
+            <div class="sectionwrapper shadow">
+                <div class="subheader_title">
+                    <h3>SIALA SAGA</h3>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <h3 class="">Siala Saga højtaler</h3>
+                        <h1 class="product_title"></h1>
+                        <p class="product_price"></p>
+                        <p class="product_text"></p>
+                        <div class="materials">
+                            <div class="greb">
+                                <p>Greb</p>
+                                <div class="greb_container">
+                                    <div class="material_tooltip1">
+                                        <img src="img/oak.png">
+                                        <span class="material_box hidden">
+                                            Egetræ greb
+                                        </span>
+                                    </div>
+                                    <div class="material_tooltip2">
+                                        <img src="img/smoked_oak.png">
+                                        <span class="material_box hidden">
+                                            Røget egetræ greb
+                                        </span>
+                                    </div>
+                                    <div class="material_tooltip3">
+                                        <img src="img/leather_cognac.png">
+                                        <span class="material_box hidden">
+                                            Valnød greb
+                                        </span>
+                                    </div>
+                                    <div class="material_tooltip4">
+                                        <img src="img/white.png">
+                                        <span class="material_box hidden">
+                                            Hvid corian greb
+                                        </span>
+                                    </div>
+                                    <div class="material_tooltip5">
+                                        <img src="img/leather_none.png">
+                                        <span class="material_box hidden">
+                                            Intet greb
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ramme">
+                                <p>Læder</p>
+                                <div class="ramme_container">
+                                    <div class="material_tooltip6">
+                                        <img src="img/leather_black.png">
+                                        <span class="material_box hidden">
+                                            Sort læder
+                                        </span>
+                                    </div>
+                                    <div class="material_tooltip7">
+                                        <img src="img/leather_dark.png">
+                                        <span class="material_box hidden">
+                                            Mokkafarvet læder
+                                        </span>
+                                    </div>
+                                    <div class="material_tooltip8">
+                                        <img src="img/leather_cognac.png">
+                                        <span class="material_box hidden">
+                                            Cognac læder
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="topbund">
+                                <p>Træpanel</p>
+                                <div class="topbund_container">
+                                    <div class="material_tooltip9">
+                                        <img src="img/oak.png">
+                                        <span class="material_box hidden">
+                                            Egetræ
+                                        </span>
+                                    </div>
+                                    <div class="material_tooltip10">
+                                        <img src="img/smoked_oak.png">
+                                        <span class="material_box hidden">
+                                            Røget egetræ
+                                        </span>
+                                    </div>
+                                    <div class="material_tooltip11">
+                                        <img src="img/leather_cognac.png">
+                                        <span class="material_box hidden">
+                                            Valnød
+                                        </span>
+                                    </div>
+                                    <div class="material_tooltip12">
+                                        <img src="img/white.png">
+                                        <span class="material_box hidden">
+                                            Hvid corian
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="basport">
+                                <p>Basport</p>
+                                <div class="basport_container">
+                                    <div class="material_tooltip13">
+                                        <img src="img/oak.png">
+                                        <span class="material_box hidden">
+                                            Egetræ
+                                        </span>
+                                    </div>
+                                    <div class="material_tooltip14">
+                                        <img src="img/smoked_oak.png">
+                                        <span class="material_box hidden">
+                                            Røget egetræ
+                                        </span>
+                                    </div>
+                                    <div class="material_tooltip15">
+                                        <img src="img/leather_cognac.png">
+                                        <span class="material_box hidden">
+                                            Valnød
+                                        </span>
+                                    </div>
+                                    <div class="material_tooltip16">
+                                        <img src="img/white.png">
+                                        <span class="material_box hidden">
+                                            Hvid corian
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="button" href="basket.html">KØB</a>
+                        <div class="back_link" onclick="goBack()">
+                            <a href="#">Tilbage</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <img class="product_img" src="" alt="">
+                        <section id="product_gallery">
+                            <div class="pg_row">
+                                <div class="pg_column">
+                                    <img class="product_img1" src="" alt="" style="width:100%" onclick="openImg(this);">
+                                </div>
+                                <div class="pg_column">
+                                    <img class="product_img2" src="" alt="" style="width:100%" onclick="openImg(this);">
+                                </div>
+                                <div class="pg_column">
+                                    <img class="product_img3" src="" alt="" style="width:100%" onclick="openImg(this);">
+                                </div>
+                            </div>
+
+                            <div class="pg_container">
+                                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                                <img id="expandedImg" style="width:100%">
+                                <div id="imgtext"></div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="product_description">
+            <div class="sectionwrapper shadow bg_white">
+                <div class="heading">
+                    <h2>Du vælger materialer og kombinationer, <br>vi bygger den i hånden skræddersyet til dig.</h2>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <h2>Overskrift</h2>
+                        <h3>En lille underoverskrift</h3>
+                        <p>Hos Siala ses filosofien af et kompromisløst design uanset vinklen. Vores bagside er dekoreret med et børstet messing panel med indbygget LED indikatorer, AUX plug-in samt power input. Åbningen til basporten er håndbygget efter eget valgt materiale.
+                        </p>
+                    </div>
+                    <div class="column">
+                        <img class="description_img" src="img/description_1.jpg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <img class="description_img" src="img/description_2.jpg">
+                    </div>
+                    <div class="column">
+                        <h2>Overskrift</h2>
+                        <h3>En lille underoverskrift</h3>
+                        <p>Vi arbejder med den nyeste teknologi i vores højttalere. Højttalerne er lavet med SMART bluetooth knapper, så du blot skal placere fingeren over de indgraverede symboler i din højttaler for at bruge den.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="sectionwrapper">
+            <div class="row">
+                <div class="column hide-mobile">
+                    <h3>Følg os</h3>
+                    <ul class="quicklinks">
+                        <li><a href="https://facebook.com/sialacph/">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/sialacph/">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/company/siala-aps/?originalSubdomain=dk">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Samarbejder</h3>
+                    <ul class="quicklinks">
+                        <li><a href="article.html">Siala x Nicolaj Bo</a></li>
+                        <li><a href="article.html">Siala x Stil og Form</a></li>
+                        <li><a href="article.html">Siala x Onetreeplanted</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Kontakt os</h3>
+                    <ul>
+                        <li class="li1">+45 74 42 18 48</li>
+                        <li class="li2">Rundholtsvej 111, 2300 København S</li>
+                        <li class="li3">info@siala.dk</li>
+                    </ul>
+                </div>
+                <div class="column logo_column">
+                    <img src="img/logo_dark.png" width="200px">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="bottom_bar">
+        <div class="sectionwrapper">
+            <div class="row">
+                <div class="column">CVR: 35902619</div>
+                <div class="column align-right">2020 © Copyright</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.querySelector(".material_tooltip1 img").addEventListener("mouseover", showMaterialBox);
+        document.querySelector(".material_tooltip1 img").addEventListener("mouseout", hideMaterialBox);
+
+        document.querySelector(".material_tooltip2 img").addEventListener("mouseover", showMaterialBox);
+        document.querySelector(".material_tooltip2 img").addEventListener("mouseout", hideMaterialBox);
+
+        document.querySelector(".material_tooltip3 img").addEventListener("mouseover", showMaterialBox);
+        document.querySelector(".material_tooltip3 img").addEventListener("mouseout", hideMaterialBox);
+
+        document.querySelector(".material_tooltip4 img").addEventListener("mouseover", showMaterialBox);
+        document.querySelector(".material_tooltip4 img").addEventListener("mouseout", hideMaterialBox);
+
+        document.querySelector(".material_tooltip5 img").addEventListener("mouseover", showMaterialBox);
+        document.querySelector(".material_tooltip5 img").addEventListener("mouseout", hideMaterialBox);
+
+        document.querySelector(".material_tooltip6 img").addEventListener("mouseover", showMaterialBox);
+        document.querySelector(".material_tooltip6 img").addEventListener("mouseout", hideMaterialBox);
+
+        document.querySelector(".material_tooltip7 img").addEventListener("mouseover", showMaterialBox);
+        document.querySelector(".material_tooltip7 img").addEventListener("mouseout", hideMaterialBox);
+
+        document.querySelector(".material_tooltip8 img").addEventListener("mouseover", showMaterialBox);
+        document.querySelector(".material_tooltip8 img").addEventListener("mouseout", hideMaterialBox);
+
+        document.querySelector(".material_tooltip9 img").addEventListener("mouseover", showMaterialBox);
+        document.querySelector(".material_tooltip9 img").addEventListener("mouseout", hideMaterialBox);
+
+        document.querySelector(".material_tooltip10 img").addEventListener("mouseover", showMaterialBox);
+        document.querySelector(".material_tooltip10 img").addEventListener("mouseout", hideMaterialBox);
+
+        document.querySelector(".material_tooltip11 img").addEventListener("mouseover", showMaterialBox);
+        document.querySelector(".material_tooltip11 img").addEventListener("mouseout", hideMaterialBox);
+
+        document.querySelector(".material_tooltip12 img").addEventListener("mouseover", showMaterialBox);
+        document.querySelector(".material_tooltip12 img").addEventListener("mouseout", hideMaterialBox);
+
+        document.querySelector(".material_tooltip13 img").addEventListener("mouseover", showMaterialBox);
+        document.querySelector(".material_tooltip13 img").addEventListener("mouseout", hideMaterialBox);
+
+        document.querySelector(".material_tooltip14 img").addEventListener("mouseover", showMaterialBox);
+        document.querySelector(".material_tooltip14 img").addEventListener("mouseout", hideMaterialBox);
+
+        document.querySelector(".material_tooltip15 img").addEventListener("mouseover", showMaterialBox);
+        document.querySelector(".material_tooltip15 img").addEventListener("mouseout", hideMaterialBox);
+
+        document.querySelector(".material_tooltip16 img").addEventListener("mouseover", showMaterialBox);
+        document.querySelector(".material_tooltip16 img").addEventListener("mouseout", hideMaterialBox);
+
+        function showMaterialBox() {
+            this.parentElement.querySelector(".material_box").classList.remove("hidden");
+        }
+
+        function hideMaterialBox() {
+            this.parentElement.querySelector(".material_box").classList.add("hidden");
+        }
+
+    </script>
+
+    <!-- === WP REST API FAG === -->
+    <script>
+        let urlParams = new URLSearchParams(window.location.search);
+        let id = urlParams.get("id");
+        let product;
+        document.addEventListener("DOMContentLoaded", getTheDish);
+        async function getTheDish() {
+
+            let url = "http://www.weblouise.dk/kea/2_semester/eksamen/siala_wordpress/wordpress/wp-json/wp/v2/produkter/" + id;
+            let jsonData = await fetch(url);
+            product = await jsonData.json();
+            //console.log("LOADING DONE",theDish);
+            //            showDishes();
+
+            document.querySelector(".product_img").src = product.produktbillede.guid;
+            document.querySelector(".product_img1").src = product.produktbillede.guid;
+            document.querySelector(".product_img2").src = product.produktbillede2.guid;
+            document.querySelector(".product_img3").src = product.produktbillede3.guid;
+            document.querySelector(".product_text").innerHTML = product.beskrivelse;
+            document.querySelector(".product_title").innerHTML = product.produktnavn;
+            document.querySelector(".product_price").innerHTML = product.pris;
+        }
+
+    </script>
+    <script>
+        function openImg(imgs) {
+            var expandImg = document.querySelector(".product_img");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+        }
+
+    </script>
+</body>
+
+</html>

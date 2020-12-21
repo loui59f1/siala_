@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories | Siala</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_flickity.css">
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- === HEADER === -->
+    <header class="header">
+        <div class="container">
+            <div id="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="" class="logo_normal">
+                </a>
+            </div>
+            <div id="burger-menu" class="overlay">
+                <span id="closebtn">&times;</span>
+                <div class="burger-logo">
+                </div>
+                <ul class="overlay-content">
+                    <li><a href="index.html">Forside</a></li>
+                    <li><a href="product.html?id=20">Produkter</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                    <li><a href="om.html">Om os</a></li>
+                    <li><a href="kontakt.html">Kontakt os</a></li>
+                    <li><a href="basket.html">Indkøbskurv</a></li>
+                </ul>
+            </div>
+            <span id="openbtn">&#9776;</span>
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="index.html">Forside</a></li>
+                    <li><a href="product.html?id=20">Produkter</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                    <li><a href="om.html">Om os</a></li>
+                    <li><a href="kontakt.html">Kontakt os</a></li>
+                    <li class="basket_icon"><a class="basket_link" href="basket.html"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- === SUBHEADER SECTION === -->
+        <div class="subheader"></div>
+
+        <section id="blog">
+            <div class="sectionwrapper shadow">
+                <div class="subheader_title">
+                    <h3>Stories</h3>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <a href="article.html"><img src="img/about.jpg">
+                            <div class="date">
+                                15-12-2020
+                            </div>
+                        </a>
+                    </div>
+                    <div class="column flex">
+                        <div class="">
+                            <h3><span class="golden_ranger">siala </span><span class="thin">x</span> Stil og form</h3>
+                            <p>Vi har indgået et samarbejde med interiørvirksomheden Stil og Form, hvor de leverer restmaterialer til os, som vi bruger til vores højtalere. På den måde går intet til spilde og vi sikrer os de bedste materialer.</p>
+                            <div class="back_link">
+                                <a href="#">Læs&nbsp;artikel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEMPLATES  -->
+        <template id="filter_btns_tmpl">
+            <h3>Huop</h3>
+        </template>
+
+        <template id="ret_tmpl">
+            <section class="ret">
+                <div></div>
+                <img src="" alt="">
+                <div class="ret_tekst">
+                    <h2></h2>
+                    <p id="short_text"></p>
+                </div>
+            </section>
+        </template>
+
+        <!--   Filter  btns -->
+        <nav class="filter_nav">
+            <h3>Alle</h3>
+        </nav>
+        <!--  Dishes  -->
+        <section id="blog_wordpress">
+            <div class="retter shadow bg_white">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="sectionwrapper">
+            <div class="row">
+                <div class="column hide-mobile">
+                    <h3>Følg os</h3>
+                    <ul class="quicklinks">
+                        <li><a href="https://facebook.com/sialacph/">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/sialacph/">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/company/siala-aps/?originalSubdomain=dk">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Samarbejder</h3>
+                    <ul class="quicklinks">
+                        <li><a href="article.html">Siala x Nicolaj Bo</a></li>
+                        <li><a href="article.html">Siala x Stil og Form</a></li>
+                        <li><a href="article.html">Siala x Onetreeplanted</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Kontakt os</h3>
+                    <ul>
+                        <li class="li1">+45 74 42 18 48</li>
+                        <li class="li2">Rundholtsvej 111, 2300 København S</li>
+                        <li class="li3">info@siala.dk</li>
+                    </ul>
+                </div>
+                <div class="column logo_column">
+                    <img src="img/logo_dark.png" width="200px">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="bottom_bar">
+        <div class="sectionwrapper">
+            <div class="row">
+                <div class="column">CVR: 35902619</div>
+                <div class="column align-right">2020 © Copyright</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        "use strict"
+
+        let theCategories;
+
+        let theDishes;
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            getTheCategories();
+        }
+
+        async function getTheCategories() {
+            let url = "http://weblouise.dk/kea/2_semester/eksamen/siala_wordpress/wordpress/wp-json/wp/v2/blogkategori";
+            let jsonData = await fetch(url);
+            theCategories = await jsonData.json();
+            generateCategoryBTNs();
+
+            getTheDishes();
+
+        }
+
+
+        async function getTheDishes() {
+
+            let url = "http://weblouise.dk/kea/2_semester/eksamen/siala_wordpress/wordpress/wp-json/wp/v2/blog?per_page=100";
+            let jsonData = await fetch(url);
+            theDishes = await jsonData.json();
+            console.log("LOADING DONE");
+
+
+            document.querySelector(".filter_nav h3").click();
+        }
+
+
+        function generateCategoryBTNs() {
+
+            let dest = document.querySelector(".filter_nav");
+            let temp = document.querySelector("#filter_btns_tmpl");
+
+            document.querySelector(".filter_nav h3").dataset.id = "alle";
+            document.querySelector(".filter_nav h3").addEventListener("click", categoryClick);
+            theCategories.forEach(category => {
+                // fjern uncategorised
+                if (category.slug != "uncategorised") {
+                    let klon = temp.cloneNode(true).content;
+                    klon.querySelector("h3").textContent = category.name;
+                    klon.querySelector("h3").dataset.name = category.name;
+                    klon.querySelector("h3").dataset.id = category.id;
+
+                    klon.querySelector("h3").addEventListener("click", categoryClick)
+                    dest.appendChild(klon);
+                }
+
+            })
+        }
+
+        function categoryClick() {
+
+            console.log(this.dataset.id);
+
+
+            filterContent(this.dataset.id);
+
+            document.querySelectorAll(".filter_nav h3").forEach(each => each.classList.remove("valgt"));
+            this.classList.add("valgt");
+
+        }
+
+
+        function filterContent(theFilter) {
+
+            let filtrerede;
+            if (theFilter == "alle") {
+                filtrerede = theDishes;
+            } else {
+                filtrerede = theDishes.filter(blog => ret.categories[0] == theFilter);
+
+            }
+            console.log(filtrerede)
+            showPosts(filtrerede);
+        }
+
+        function showPosts(theFilteredJson) {
+            let dest = document.querySelector(".retter");
+            let temp = document.querySelector("#ret_tmpl");
+            dest.innerHTML = "";
+            theFilteredJson.forEach(blog => {
+                //                console.log(ret)
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector("h2").textContent = blog.titel;
+                klon.querySelector("img").src = blog.billede.guid;
+                klon.querySelector("#short_text").textContent = blog.beskrivelse;
+                klon.querySelector(".ret").addEventListener("click", function() {
+                    dishClick(ret.id)
+                });
+                dest.appendChild(klon);
+
+            });
+
+
+        }
+
+        function dishClick(id) {
+            console.log("ID", id);
+            location.href = "singleview.html?id=" + id;
+
+        }
+
+    </script>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
